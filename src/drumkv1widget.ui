@@ -22,23 +22,41 @@
  </comment>
  <class>drumkv1widget</class>
  <widget class="QWidget" name="drumkv1widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1783</width>
+    <height>712</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>drumkv1</string>
   </property>
-  <property name="windowIcon" >
-   <iconset resource="drumkv1.qrc" >:/images/drumkv1.png</iconset>
+  <property name="windowIcon">
+   <iconset resource="drumkv1.qrc">
+    <normaloff>:/images/drumkv1.png</normaloff>:/images/drumkv1.png</iconset>
   </property>
-  <layout class="QVBoxLayout" >
-   <property name="margin" >
+  <layout class="QVBoxLayout">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
     <number>0</number>
    </property>
-   <property name="spacing" >
-    <number>8</number>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
    </property>
    <item>
     <layout class="QHBoxLayout">
      <item>
-      <widget class="drumkv1widget_preset" name="Preset" />
+      <widget class="drumkv1widget_preset" name="Preset"/>
      </item>
      <item>
       <widget class="QToolButton" name="SwapParamsAButton">
@@ -67,15 +85,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QTabBar" name="TabBar">
-      </widget>
+      <widget class="QTabBar" name="TabBar" native="true"/>
      </item>
      <item>
       <spacer>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint">
+       <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
          <height>20</height>
@@ -106,8 +123,17 @@
     </layout>
    </item>
    <item>
+    <widget class="drumkv1widget_status" name="StatusBar"/>
+   </item>
+   <item>
     <widget class="QStackedWidget" name="StackedWidget">
-     <property name="currentIndex" >
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
       <number>0</number>
      </property>
      <widget class="QWidget" name="Drumkit1Page">
@@ -115,102 +141,7 @@
        <string>Drum Kit</string>
       </property>
       <layout class="QGridLayout">
-       <item row="0" column="0" colspan="4">
-        <widget class="drumkv1widget_elements" name="Elements" />
-       </item>
-       <item row="0" column="4" colspan="9">
-        <widget class="QGroupBox" name="Gen1GroupBox">
-         <property name="title">
-          <string>GEN</string>
-         </property>
-         <layout class="QHBoxLayout">
-          <item>
-           <widget class="drumkv1widget_sample" name="Gen1Sample">
-            <property name="toolTip">
-             <string>GEN Sample</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="drumkv1widget_combo" name="Gen1ReverseKnob">
-            <property name="toolTip">
-             <string>GEN Reverse</string>
-            </property>
-            <property name="text">
-             <string>Reverse</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="drumkv1widget_spin" name="Gen1GroupKnob">
-            <property name="toolTip">
-             <string>GEN Group</string>
-            </property>
-            <property name="text">
-             <string>Group</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint">
-             <size>
-              <width>8</width>
-              <height>8</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="drumkv1widget_spin" name="Gen1CoarseKnob">
-            <property name="toolTip">
-             <string>GEN Coarse</string>
-            </property>
-            <property name="text">
-             <string>Coarse</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="drumkv1widget_spin" name="Gen1FineKnob">
-            <property name="toolTip">
-             <string>GEN Fine</string>
-            </property>
-            <property name="text">
-             <string>Fine</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint">
-             <size>
-              <width>8</width>
-              <height>8</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="drumkv1widget_spin" name="Gen1EnvTimeKnob">
-            <property name="toolTip">
-             <string>GEN Env.Time</string>
-            </property>
-            <property name="text">
-             <string>Env.Time</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="1" column="0" rowspan="2" colspan="5">
+       <item row="1" column="1" rowspan="2" colspan="5">
         <widget class="QGroupBox" name="Dcf1GroupBox">
          <property name="title">
           <string>DCF</string>
@@ -230,7 +161,7 @@
               <property name="toolTip">
                <string>DCF Cutoff</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Cutoff</string>
               </property>
              </widget>
@@ -240,7 +171,7 @@
               <property name="toolTip">
                <string>DCF Resonance</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Reso</string>
               </property>
              </widget>
@@ -250,7 +181,7 @@
               <property name="toolTip">
                <string>DCF Type</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Type</string>
               </property>
              </widget>
@@ -260,7 +191,7 @@
               <property name="toolTip">
                <string>DCF Slope</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Slope</string>
               </property>
              </widget>
@@ -274,7 +205,7 @@
               <property name="toolTip">
                <string>DCF Envelope</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Envelope</string>
               </property>
              </widget>
@@ -291,7 +222,7 @@
               <property name="toolTip">
                <string>DCF Attack</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Attack</string>
               </property>
              </widget>
@@ -301,7 +232,7 @@
               <property name="toolTip">
                <string>DCF Decay 1</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Decay 1</string>
               </property>
              </widget>
@@ -311,7 +242,7 @@
               <property name="toolTip">
                <string>DCF Level 2</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Level 2</string>
               </property>
              </widget>
@@ -321,7 +252,7 @@
               <property name="toolTip">
                <string>DCF Decay 2</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Decay 2</string>
               </property>
              </widget>
@@ -331,7 +262,7 @@
          </layout>
         </widget>
        </item>
-       <item row="1" column="5" rowspan="2" colspan="8">
+       <item row="1" column="6" rowspan="2" colspan="8">
         <widget class="QGroupBox" name="Lfo1GroupBox">
          <property name="title">
           <string>LFO</string>
@@ -351,7 +282,7 @@
               <property name="toolTip">
                <string>LFO Wave Shape</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Shape</string>
               </property>
              </widget>
@@ -361,7 +292,7 @@
               <property name="toolTip">
                <string>LFO Wave Width</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Width</string>
               </property>
              </widget>
@@ -378,7 +309,7 @@
               <property name="toolTip">
                <string>LFO Attack</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Attack</string>
               </property>
              </widget>
@@ -388,7 +319,7 @@
               <property name="toolTip">
                <string>LFO Decay 1</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Decay 1</string>
               </property>
              </widget>
@@ -398,7 +329,7 @@
               <property name="toolTip">
                <string>LFO Level 2</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Level 2</string>
               </property>
              </widget>
@@ -408,7 +339,7 @@
               <property name="toolTip">
                <string>LFO Decay 2</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Decay 2</string>
               </property>
              </widget>
@@ -422,7 +353,7 @@
               <property name="toolTip">
                <string>LFO BPM</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>BPM</string>
               </property>
              </widget>
@@ -432,7 +363,7 @@
               <property name="toolTip">
                <string>LFO Rate</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Rate</string>
               </property>
              </widget>
@@ -442,7 +373,7 @@
               <property name="toolTip">
                <string>LFO Sync</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Sync</string>
               </property>
              </widget>
@@ -452,7 +383,7 @@
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
-              <property name="sizeHint">
+              <property name="sizeHint" stdset="0">
                <size>
                 <width>8</width>
                 <height>8</height>
@@ -465,7 +396,7 @@
               <property name="toolTip">
                <string>LFO Sweep</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Sweep</string>
               </property>
              </widget>
@@ -475,7 +406,7 @@
               <property name="toolTip">
                <string>LFO Pitch</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Pitch</string>
               </property>
              </widget>
@@ -485,7 +416,7 @@
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
-              <property name="sizeHint">
+              <property name="sizeHint" stdset="0">
                <size>
                 <width>8</width>
                 <height>8</height>
@@ -498,7 +429,7 @@
               <property name="toolTip">
                <string>LFO Cutoff</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Cutoff</string>
               </property>
              </widget>
@@ -508,7 +439,7 @@
               <property name="toolTip">
                <string>LFO Resonance</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Reso</string>
               </property>
              </widget>
@@ -518,7 +449,7 @@
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
-              <property name="sizeHint">
+              <property name="sizeHint" stdset="0">
                <size>
                 <width>8</width>
                 <height>8</height>
@@ -531,7 +462,7 @@
               <property name="toolTip">
                <string>LFO Panning</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Panning</string>
               </property>
              </widget>
@@ -541,7 +472,7 @@
               <property name="toolTip">
                <string>LFO Volume</string>
               </property>
-              <property name="text">
+              <property name="text" stdset="0">
                <string>Volume</string>
               </property>
              </widget>
@@ -551,7 +482,7 @@
          </layout>
         </widget>
        </item>
-       <item row="3" column="0" colspan="5">
+       <item row="3" column="1" colspan="5">
         <widget class="QGroupBox" name="Dca1GroupBox">
          <property name="title">
           <string>DCA</string>
@@ -562,7 +493,7 @@
             <property name="toolTip">
              <string>DCA Volume</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Volume</string>
             </property>
            </widget>
@@ -579,7 +510,7 @@
             <property name="toolTip">
              <string>DCA Attack</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Attack</string>
             </property>
            </widget>
@@ -589,7 +520,7 @@
             <property name="toolTip">
              <string>DCA Decay 1</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Decay 1</string>
             </property>
            </widget>
@@ -599,7 +530,7 @@
             <property name="toolTip">
              <string>DCA Level 2</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Level 2</string>
             </property>
            </widget>
@@ -609,7 +540,7 @@
             <property name="toolTip">
              <string>DCA Decay 2</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Decay 2</string>
             </property>
            </widget>
@@ -617,7 +548,7 @@
          </layout>
         </widget>
        </item>
-       <item row="3" column="5" colspan="5">
+       <item row="3" column="6" colspan="5">
         <widget class="QGroupBox" name="Def1GroupBox">
          <property name="title">
           <string>DEF</string>
@@ -628,17 +559,17 @@
             <property name="toolTip">
              <string>DEF Pitchbend</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Pitchbend</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="drumkv1widget_spin" name="Def1ModwheelKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>DEF Modwheel</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Modwheel</string>
             </property>
            </widget>
@@ -648,7 +579,7 @@
             <property name="toolTip">
              <string>DEF Pressure</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Pressure</string>
             </property>
            </widget>
@@ -658,7 +589,7 @@
             <property name="toolTip">
              <string>DEF Velocity</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Velocity</string>
             </property>
            </widget>
@@ -668,7 +599,7 @@
             <property name="toolTip">
              <string>DEF Channel</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Channel</string>
             </property>
            </widget>
@@ -678,7 +609,7 @@
             <property name="toolTip">
              <string>DEF Note Off</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Note Off</string>
             </property>
            </widget>
@@ -686,7 +617,7 @@
          </layout>
         </widget>
        </item>
-       <item row="3" column="10" colspan="3">
+       <item row="3" column="11" colspan="3">
         <widget class="QGroupBox" name="Out1GroupBox">
          <property name="title">
           <string>OUT</string>
@@ -697,17 +628,17 @@
             <property name="toolTip">
              <string>OUT Stereo Width</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Width</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="drumkv1widget_spin" name="Out1PanningKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>OUT Panning</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Panning</string>
             </property>
            </widget>
@@ -717,7 +648,7 @@
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint">
+            <property name="sizeHint" stdset="0">
              <size>
               <width>8</width>
               <height>8</height>
@@ -730,7 +661,7 @@
             <property name="toolTip">
              <string>OUT FX Send</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Effects</string>
             </property>
            </widget>
@@ -740,7 +671,7 @@
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint">
+            <property name="sizeHint" stdset="0">
              <size>
               <width>8</width>
               <height>8</height>
@@ -753,12 +684,120 @@
             <property name="toolTip">
              <string>OUT Volume</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Volume</string>
             </property>
            </widget>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item row="0" column="5" colspan="9">
+        <widget class="QGroupBox" name="Gen1GroupBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>GEN</string>
+         </property>
+         <layout class="QHBoxLayout">
+          <item>
+           <widget class="drumkv1widget_sample" name="Gen1Sample" native="true">
+            <property name="toolTip">
+             <string>GEN Sample</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="drumkv1widget_combo" name="Gen1ReverseKnob">
+            <property name="toolTip">
+             <string>GEN Reverse</string>
+            </property>
+            <property name="text" stdset="0">
+             <string>Reverse</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="drumkv1widget_spin" name="Gen1GroupKnob">
+            <property name="toolTip">
+             <string>GEN Group</string>
+            </property>
+            <property name="text" stdset="0">
+             <string>Group</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="drumkv1widget_spin" name="Gen1CoarseKnob">
+            <property name="toolTip">
+             <string>GEN Coarse</string>
+            </property>
+            <property name="text" stdset="0">
+             <string>Coarse</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="drumkv1widget_spin" name="Gen1FineKnob">
+            <property name="toolTip">
+             <string>GEN Fine</string>
+            </property>
+            <property name="text" stdset="0">
+             <string>Fine</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="drumkv1widget_spin" name="Gen1EnvTimeKnob">
+            <property name="toolTip">
+             <string>GEN Env.Time</string>
+            </property>
+            <property name="text" stdset="0">
+             <string>Env.Time</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="4">
+        <widget class="drumkv1widget_elements" name="Elements">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
         </widget>
        </item>
       </layout>
@@ -773,7 +812,7 @@
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint">
+         <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
            <height>20</height>
@@ -792,7 +831,7 @@
             <property name="toolTip">
              <string>Chorus Wet</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Wet</string>
             </property>
            </widget>
@@ -802,7 +841,7 @@
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint">
+            <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
               <height>20</height>
@@ -812,10 +851,10 @@
           </item>
           <item>
            <widget class="drumkv1widget_spin" name="Cho1DelayKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>Chorus Delay</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Delay</string>
             </property>
            </widget>
@@ -825,7 +864,7 @@
             <property name="toolTip">
              <string>Chorus Feedback</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Feedback</string>
             </property>
            </widget>
@@ -835,7 +874,7 @@
             <property name="toolTip">
              <string>Chorus Rate</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Rate</string>
             </property>
            </widget>
@@ -845,7 +884,7 @@
             <property name="toolTip">
              <string>Chorus Modulation</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Modulation</string>
             </property>
            </widget>
@@ -864,7 +903,7 @@
             <property name="toolTip">
              <string>Flanger Wet</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Wet</string>
             </property>
            </widget>
@@ -874,7 +913,7 @@
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint">
+            <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
               <height>20</height>
@@ -884,10 +923,10 @@
           </item>
           <item>
            <widget class="drumkv1widget_spin" name="Fla1DelayKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>Flanger Delay</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Delay</string>
             </property>
            </widget>
@@ -897,7 +936,7 @@
             <property name="toolTip">
              <string>Flanger Feedback</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Feedback</string>
             </property>
            </widget>
@@ -907,7 +946,7 @@
             <property name="toolTip">
              <string>Flanger Daft</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Daft</string>
             </property>
            </widget>
@@ -926,7 +965,7 @@
             <property name="toolTip">
              <string>Phaser Wet</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Wet</string>
             </property>
            </widget>
@@ -936,7 +975,7 @@
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint">
+            <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
               <height>20</height>
@@ -946,10 +985,10 @@
           </item>
           <item>
            <widget class="drumkv1widget_spin" name="Pha1RateKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>Phaser Rate</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Rate</string>
             </property>
            </widget>
@@ -959,7 +998,7 @@
             <property name="toolTip">
              <string>Phaser Feedback</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Feedback</string>
             </property>
            </widget>
@@ -969,7 +1008,7 @@
             <property name="toolTip">
              <string>Phaser Depth</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Depth</string>
             </property>
            </widget>
@@ -979,7 +1018,7 @@
             <property name="toolTip">
              <string>Phaser Daft</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Daft</string>
             </property>
            </widget>
@@ -998,7 +1037,7 @@
             <property name="toolTip">
              <string>Delay Wet</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Wet</string>
             </property>
            </widget>
@@ -1008,7 +1047,7 @@
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint">
+            <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
               <height>20</height>
@@ -1018,10 +1057,10 @@
           </item>
           <item>
            <widget class="drumkv1widget_spin" name="Del1DelayKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>Delay Delay</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Delay</string>
             </property>
            </widget>
@@ -1031,7 +1070,7 @@
             <property name="toolTip">
              <string>Delay Feedback</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Feedback</string>
             </property>
            </widget>
@@ -1041,7 +1080,7 @@
             <property name="toolTip">
              <string>Delay BPM</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>BPM</string>
             </property>
            </widget>
@@ -1060,7 +1099,7 @@
             <property name="toolTip">
              <string>Dynamic Compressor</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Compress</string>
             </property>
            </widget>
@@ -1070,7 +1109,7 @@
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
-            <property name="sizeHint">
+            <property name="sizeHint" stdset="0">
              <size>
               <width>8</width>
               <height>8</height>
@@ -1080,10 +1119,10 @@
           </item>
           <item>
            <widget class="drumkv1widget_combo" name="Dyn1LimiterKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>Dynamic Limiter</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Limiter</string>
             </property>
            </widget>
@@ -1096,7 +1135,7 @@
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint">
+         <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
            <height>20</height>
@@ -1115,7 +1154,7 @@
             <property name="toolTip">
              <string>Reverb Wet</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Wet</string>
             </property>
            </widget>
@@ -1125,7 +1164,7 @@
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint">
+            <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
               <height>20</height>
@@ -1135,10 +1174,10 @@
           </item>
           <item>
            <widget class="drumkv1widget_spin" name="Rev1RoomKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>Reverb Room</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Room</string>
             </property>
            </widget>
@@ -1148,17 +1187,17 @@
             <property name="toolTip">
              <string>Reverb Damp</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Damp</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="drumkv1widget_spin" name="Rev1FeedbKnob">
-             <property name="toolTip">
+            <property name="toolTip">
              <string>Reverb Feedback</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Feedback</string>
             </property>
            </widget>
@@ -1168,7 +1207,7 @@
             <property name="toolTip">
              <string>Reverb Width</string>
             </property>
-            <property name="text">
+            <property name="text" stdset="0">
              <string>Width</string>
             </property>
            </widget>
@@ -1181,8 +1220,8 @@
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeHint">
-           <size>
+         <property name="sizeHint" stdset="0">
+          <size>
            <width>8</width>
            <height>8</height>
           </size>
@@ -1193,40 +1232,37 @@
      </widget>
     </widget>
    </item>
-   <item>
-    <widget class="drumkv1widget_status" name="StatusBar" />
-   </item>
   </layout>
-  <action name="helpConfigureAction" >
-   <property name="text" >
+  <action name="helpConfigureAction">
+   <property name="text">
     <string>&amp;Configure...</string>
    </property>
-   <property name="iconText" >
+   <property name="iconText">
     <string>Configure</string>
    </property>
-   <property name="statusTip" >
+   <property name="statusTip">
     <string>Configure options</string>
    </property>
   </action>
-  <action name="helpAboutAction" >
-   <property name="text" >
+  <action name="helpAboutAction">
+   <property name="text">
     <string>&amp;About...</string>
    </property>
-   <property name="iconText" >
+   <property name="iconText">
     <string>About</string>
    </property>
-   <property name="statusTip" >
+   <property name="statusTip">
     <string>Show information about this application program</string>
    </property>
   </action>
-  <action name="helpAboutQtAction" >
-   <property name="text" >
+  <action name="helpAboutQtAction">
+   <property name="text">
     <string>About &amp;Qt...</string>
    </property>
-   <property name="iconText" >
+   <property name="iconText">
     <string>About Qt</string>
    </property>
-   <property name="statusTip" >
+   <property name="statusTip">
     <string>Show information about the Qt toolkit</string>
    </property>
   </action>
@@ -1277,9 +1313,19 @@
    <header>drumkv1widget_elements.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>QTabBar</class>
+   <extends>QWidget</extends>
+   <header>qtabbar.h</header>
+  </customwidget>
+  <customwidget>
+   <class>drumkv1widget_sample</class>
+   <extends>QWidget</extends>
+   <header>drumkv1widget_sample.h</header>
+  </customwidget>
  </customwidgets>
  <resources>
-  <include location="drumkv1.qrc" />
+  <include location="drumkv1.qrc"/>
  </resources>
  <connections/>
 </ui>
